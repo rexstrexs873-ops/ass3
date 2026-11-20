@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #a8c8c8 0%, #e8f0f0 100%);
+    padding: 20px;
+  }
+
+  .card {
+    background: #fff;
+    width: 100%;
+    max-width: 520px;
+    padding: 32px 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  h1 {
+    font-size: 22px;
+    color: #1a2e35;
+    margin-bottom: 24px;
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    color: #4a6572;
+    margin-bottom: 6px;
+  }
+
+  .row {
+    display: flex;
+    gap: 16px;
+  }
+
+  .row .field {
+    flex: 1;
+  }
+
+  .field {
+    margin-bottom: 18px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1.5px solid #cbdde3;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #1a9aaa;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 16px;
+  }
+
+  .radio-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid #cbdde3;
+    border-radius: 6px;
+    padding: 11px 12px;
+    font-size: 14px;
+    color: #4a6572;
+    cursor: pointer;
+  }
+
+  .radio-option input {
+    accent-color: #1a9aaa;
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #4a6572;
+    margin: 6px 0 22px 0;
+    cursor: pointer;
+  }
+
+  .checkbox input {
+    margin-top: 2px;
+    accent-color: #1a9aaa;
+    width: 16px;
+    height: 16px;
+  }
+
+  button {
+    width: 100%;
+    background: #1a9aaa;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #148a99;
+  }
+
+  @media (max-width: 480px) {
+    .row, .radio-group {
+      flex-direction: column;
+      gap: 0;
+    }
+    .radio-group {
+      gap: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Contact Us</h1>
+
+    <form>
+      <div class="row">
+        <div class="field">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" required>
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="field">
+        <label>Query Type *</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="query" value="general" checked>
+            General Enquiry
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="query" value="support">
+            Support Request
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Message *</label>
+        <textarea id="message" required></textarea>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" required>
+        I consent to being contacted by the team *
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
